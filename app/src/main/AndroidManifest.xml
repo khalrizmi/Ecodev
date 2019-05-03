@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.ecodev.wikramabogor">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/research"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/research"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
+        <activity android:name="id.ecodev.wikramabogor.ui.MainScreen.MainActivity" />
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.SplashScreen.SplashActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.IntroduceScreen.IntroduceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.CredentialScreen.CredentialActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.HomeScreen.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.id.ecodev.wikramabogor"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.SurveyScreen.SurveyActivity"
+            android:parentActivityName="id.ecodev.wikramabogor.ui.PrepareSurveyScreen.PrepareActivity" />
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.PrepareSurveyScreen.PrepareActivity"
+            android:label="@string/title_activity_prepare"
+            android:parentActivityName="id.ecodev.wikramabogor.ui.HomeScreen.HomeActivity" />
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.DetailObjekScreen.DetailObjectActivity"
+            android:noHistory="true" />
+        <activity android:name="id.ecodev.wikramabogor.ui.PotensiScreen.PotensiActivity" />
+        <activity android:name="id.ecodev.wikramabogor.ui.OfferScreen.OfferActivity" />
+        <activity android:name="id.ecodev.wikramabogor.ui.SurveyScreen.DoneActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name="id.ecodev.wikramabogor.ui.DetailSurveyScreen.DetailSurveyActivity" />
+        <activity
+            android:name="id.ecodev.wikramabogor.ui.OfferMapsScreen.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name="id.ecodev.wikramabogor.ui.OfferMapsScreen.MapsSurveyActivity" />
+        <activity android:name="id.ecodev.wikramabogor.TestActivity"></activity>
+        <activity
+            android:name="id.ecodev.wikramabogor.TimeOutActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="id.ecodev.wikramabogor.Maps1Activity"
+            android:label="@string/title_activity_maps1"></activity>
+    </application>
+
+</manifest>

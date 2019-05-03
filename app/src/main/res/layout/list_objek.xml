@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:elevation="0dp"
+    android:id="@+id/cardObject"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="6dp"
+                android:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/photoObject"
+                    android:backgroundTint="#f1f1f1"
+                    android:scaleType="centerCrop"
+                    android:background="@color/grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameObject"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Main Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/descriptionObject"
+                android:text="Sebelum menjadi driver,Khiki bekerja sebagai manajer.Simak alasannya banting stir!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layoutNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="Catatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/noteObject"
+                    android:layout_marginTop="4dp"
+                    android:text="Sebelum menjadi driver,Khiki bekerja sebagai manajer.Simak alasannya banting stir!"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dateObject"
+                android:layout_marginTop="10dp"
+                android:text="1 Oktober 2001 9:12 WIB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardVerified"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textVerified"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:text="Sudah Terverifikasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardVerified2"
+                app:cardBackgroundColor="#e04141"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textVerified2"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:text="Belum di Verifikasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

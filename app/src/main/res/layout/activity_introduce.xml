@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.IntroduceScreen.IntroduceActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/previous"
+            android:textColor="@color/colorPrimary"
+            android:padding="16dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/layout_dots"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_next"
+            android:layout_alignTop="@id/tv_next"
+            android:layout_toLeftOf="@id/tv_next"
+            android:layout_toRightOf="@id/tv_previous"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"
+            android:text="@string/next"
+            android:textColor="@color/colorPrimary"
+            android:padding="16dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_above="@id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
